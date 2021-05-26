@@ -19,7 +19,8 @@
       */
 
       const addClassToTitle = function () {
-        document.getElementsByTagName("h1")[0].classList.add("myHeading");
+        let selectedH1 = document.getElementsByTagName("h1")[0]
+        selectedH1.classList.toggle("myHeading")
       };
 
       /* EXERCISE 3
@@ -132,7 +133,7 @@
   </head>
   <body>
     <header>
-      <h1 onclick="changeTitle()" id="title">This is the title of the page</h1>
+      <h1 onclick="changeTitle(), addClassToTitle()" id="title">This is the title of the page</h1>
       <h2 id="subtitle">This is the subtitle of the page</h2>
     </header>
 
