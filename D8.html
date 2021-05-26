@@ -5,8 +5,13 @@
       Write a function for changing the title of the document in something else.
       */
 
-      const changeTitle = function (newTitle) {
-        document.getElementById("title").innerHTML = "Random Words"
+      const changeTitle = function () {
+        let newH1 = document.getElementById("title")
+        if(newH1.innerHTML === "This is the title of the page"){
+          newH1.innerHTML = "Random Words"
+        } else {
+          newH1.innerHTML = "This is the title of the page"
+        }
       };
 
       /* EXERCISE 2
@@ -127,7 +132,7 @@
   </head>
   <body>
     <header>
-      <h1 id="title">This is the title of the page</h1>
+      <h1 onclick="changeTitle()" id="title">This is the title of the page</h1>
       <h2 id="subtitle">This is the subtitle of the page</h2>
     </header>
 
